@@ -1,0 +1,17 @@
+{% extends '../layouts/default.html' %}
+
+{% block content %}
+    <ul class="scores no-bullet">
+        {% for score in scores %}
+            <li class="score score-{{ loop.index }} page-{{ page }}">
+                <strong>{{ __("%d taps", score.taps) }}</strong> {{ __("by %s", score.name) }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <nav class="pagination">
+        {% if next %}
+            <a href="{{ next.href }}" class="more">{{ __("More") }}</a>
+        {% endif %}
+    </nav>
+{% endblock %}

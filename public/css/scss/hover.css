@@ -1,0 +1,2232 @@
+/*
+ * Hover.css (http://ianlunn.co.uk/)
+ * Version: 1.0.8
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+
+ * Hover.css Copyright Ian Lunn 2014.
+ */
+/* Default styles for the demo buttons */
+/* line 22, ../../../private/scss/scss/hover.scss */
+.button {
+  margin: .4em;
+  padding: 1em;
+  cursor: pointer;
+  background: #e1e1e1;
+  text-decoration: none;
+  color: #666666;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 2D TRANSITIONS */
+/* Grow */
+/* line 29, ../../../private/scss/scss/hover.scss */
+.grow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_grow.scss */
+.grow:hover, .grow:focus, .grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Shrink */
+/* line 34, ../../../private/scss/scss/hover.scss */
+.shrink {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_shrink.scss */
+.shrink:hover, .shrink:focus, .shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+/* Pulse */
+@-webkit-keyframes pulse {
+  /* line 3, ../../../private/scss/scss/effects/_pulse.scss */
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_pulse.scss */
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  /* line 3, ../../../private/scss/scss/effects/_pulse.scss */
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_pulse.scss */
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+/* line 39, ../../../private/scss/scss/hover.scss */
+.pulse {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 19, ../../../private/scss/scss/effects/_pulse.scss */
+.pulse:hover, .pulse:focus, .pulse:active {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* Pulse Grow */
+@-webkit-keyframes pulse-grow {
+  /* line 3, ../../../private/scss/scss/effects/_pulse-grow.scss */
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse-grow {
+  /* line 3, ../../../private/scss/scss/effects/_pulse-grow.scss */
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+/* line 44, ../../../private/scss/scss/hover.scss */
+.pulse-grow {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 15, ../../../private/scss/scss/effects/_pulse-grow.scss */
+.pulse-grow:hover, .pulse-grow:focus, .pulse-grow:active {
+  -webkit-animation-name: pulse-grow;
+  animation-name: pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Pulse Shrink */
+@-webkit-keyframes pulse-shrink {
+  /* line 3, ../../../private/scss/scss/effects/_pulse-shrink.scss */
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse-shrink {
+  /* line 3, ../../../private/scss/scss/effects/_pulse-shrink.scss */
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+/* line 49, ../../../private/scss/scss/hover.scss */
+.pulse-shrink {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 15, ../../../private/scss/scss/effects/_pulse-shrink.scss */
+.pulse-shrink:hover, .pulse-shrink:focus, .pulse-shrink:active {
+  -webkit-animation-name: pulse-shrink;
+  animation-name: pulse-shrink;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Push */
+@-webkit-keyframes push {
+  /* line 3, ../../../private/scss/scss/effects/_push.scss */
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_push.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes push {
+  /* line 3, ../../../private/scss/scss/effects/_push.scss */
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_push.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 54, ../../../private/scss/scss/hover.scss */
+.push {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 19, ../../../private/scss/scss/effects/_push.scss */
+.push:hover, .push:focus, .push:active {
+  -webkit-animation-name: push;
+  animation-name: push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Pop */
+@-webkit-keyframes pop {
+  /* line 3, ../../../private/scss/scss/effects/_pop.scss */
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_pop.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  /* line 3, ../../../private/scss/scss/effects/_pop.scss */
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_pop.scss */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 59, ../../../private/scss/scss/hover.scss */
+.pop {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 19, ../../../private/scss/scss/effects/_pop.scss */
+.pop:hover, .pop:focus, .pop:active {
+  -webkit-animation-name: pop;
+  animation-name: pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Rotate */
+/* line 64, ../../../private/scss/scss/hover.scss */
+.rotate {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_rotate.scss */
+.rotate:hover, .rotate:focus, .rotate:active {
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+
+/* Grow Rotate */
+/* line 69, ../../../private/scss/scss/hover.scss */
+.grow-rotate {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_grow-rotate.scss */
+.grow-rotate:hover, .grow-rotate:focus, .grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+}
+
+/* Float */
+/* line 74, ../../../private/scss/scss/hover.scss */
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_float.scss */
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* Sink */
+/* line 79, ../../../private/scss/scss/hover.scss */
+.sink {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_sink.scss */
+.sink:hover, .sink:focus, .sink:active {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+
+/* Hover */
+@-webkit-keyframes hover {
+  /* line 3, ../../../private/scss/scss/effects/_hover.scss */
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_hover.scss */
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hover {
+  /* line 3, ../../../private/scss/scss/effects/_hover.scss */
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_hover.scss */
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+/* line 84, ../../../private/scss/scss/hover.scss */
+.hover {
+  display: inline-block;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 21, ../../../private/scss/scss/effects/_hover.scss */
+.hover:hover, .hover:focus, .hover:active {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-animation-name: hover;
+  animation-name: hover;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Hang */
+@-webkit-keyframes hang {
+  /* line 3, ../../../private/scss/scss/effects/_hang.scss */
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_hang.scss */
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+
+@keyframes hang {
+  /* line 3, ../../../private/scss/scss/effects/_hang.scss */
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_hang.scss */
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+
+/* line 89, ../../../private/scss/scss/hover.scss */
+.hang {
+  display: inline-block;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 21, ../../../private/scss/scss/effects/_hang.scss */
+.hang:hover, .hang:focus, .hang:active {
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  -webkit-animation-name: hang;
+  animation-name: hang;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Skew */
+/* line 94, ../../../private/scss/scss/hover.scss */
+.skew {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_skew.scss */
+.skew:hover, .skew:focus, .skew:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+
+/* Skew Forward */
+/* line 99, ../../../private/scss/scss/hover.scss */
+.skew-forward {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 12, ../../../private/scss/scss/effects/_skew-forward.scss */
+.skew-forward:hover, .skew-forward:focus, .skew-forward:active {
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+
+/* Skew Backward */
+/* line 104, ../../../private/scss/scss/hover.scss */
+.skew-backward {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 12, ../../../private/scss/scss/effects/_skew-backward.scss */
+.skew-backward:hover, .skew-backward:focus, .skew-backward:active {
+  -webkit-transform: skew(10deg);
+  transform: skew(10deg);
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes wobble-vertical {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes wobble-vertical {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 109, ../../../private/scss/scss/hover.scss */
+.wobble-vertical {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 35, ../../../private/scss/scss/effects/_wobble-vertical.scss */
+.wobble-vertical:hover, .wobble-vertical:focus, .wobble-vertical:active {
+  -webkit-animation-name: wobble-vertical;
+  animation-name: wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble Horizontal */
+@-webkit-keyframes wobble-horizontal {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes wobble-horizontal {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 114, ../../../private/scss/scss/hover.scss */
+.wobble-horizontal {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 35, ../../../private/scss/scss/effects/_wobble-horizontal.scss */
+.wobble-horizontal:hover, .wobble-horizontal:focus, .wobble-horizontal:active {
+  -webkit-animation-name: wobble-horizontal;
+  animation-name: wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble To Bottom Right */
+@-webkit-keyframes wobble-to-bottom-right {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes wobble-to-bottom-right {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+/* line 119, ../../../private/scss/scss/hover.scss */
+.wobble-to-bottom-right {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 35, ../../../private/scss/scss/effects/_wobble-to-bottom-right.scss */
+.wobble-to-bottom-right:hover, .wobble-to-bottom-right:focus, .wobble-to-bottom-right:active {
+  -webkit-animation-name: wobble-to-bottom-right;
+  animation-name: wobble-to-bottom-right;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble To Top Right */
+@-webkit-keyframes wobble-to-top-right {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  16.65% {
+    -webkit-transform: translate(8px, -8px);
+    transform: translate(8px, -8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  33.3% {
+    -webkit-transform: translate(-6px, 6px);
+    transform: translate(-6px, 6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  49.95% {
+    -webkit-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  66.6% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  83.25% {
+    -webkit-transform: translate(1px, -1px);
+    transform: translate(1px, -1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes wobble-to-top-right {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  16.65% {
+    -webkit-transform: translate(8px, -8px);
+    transform: translate(8px, -8px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  33.3% {
+    -webkit-transform: translate(-6px, 6px);
+    transform: translate(-6px, 6px);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  49.95% {
+    -webkit-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  66.6% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  83.25% {
+    -webkit-transform: translate(1px, -1px);
+    transform: translate(1px, -1px);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+/* line 124, ../../../private/scss/scss/hover.scss */
+.wobble-to-top-right {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 35, ../../../private/scss/scss/effects/_wobble-to-top-right.scss */
+.wobble-to-top-right:hover, .wobble-to-top-right:focus, .wobble-to-top-right:active {
+  -webkit-animation-name: wobble-to-top-right;
+  animation-name: wobble-to-top-right;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble Top */
+@-webkit-keyframes wobble-top {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-top.scss */
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-top.scss */
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-top.scss */
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-top.scss */
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-top.scss */
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-top.scss */
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+@keyframes wobble-top {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-top.scss */
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-top.scss */
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-top.scss */
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-top.scss */
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-top.scss */
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-top.scss */
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+/* line 129, ../../../private/scss/scss/hover.scss */
+.wobble-top {
+  display: inline-block;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 36, ../../../private/scss/scss/effects/_wobble-top.scss */
+.wobble-top:hover, .wobble-top:focus, .wobble-top:active {
+  -webkit-animation-name: wobble-top;
+  animation-name: wobble-top;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble Bottom */
+@-webkit-keyframes wobble-bottom {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+@keyframes wobble-bottom {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+/* line 134, ../../../private/scss/scss/hover.scss */
+.wobble-bottom {
+  display: inline-block;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 36, ../../../private/scss/scss/effects/_wobble-bottom.scss */
+.wobble-bottom:hover, .wobble-bottom:focus, .wobble-bottom:active {
+  -webkit-animation-name: wobble-bottom;
+  animation-name: wobble-bottom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble Skew */
+@-webkit-keyframes wobble-skew {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+@keyframes wobble-skew {
+  /* line 3, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_wobble-skew.scss */
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+
+/* line 139, ../../../private/scss/scss/hover.scss */
+.wobble-skew {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 35, ../../../private/scss/scss/effects/_wobble-skew.scss */
+.wobble-skew:hover, .wobble-skew:focus, .wobble-skew:active {
+  -webkit-animation-name: wobble-skew;
+  animation-name: wobble-skew;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Buzz */
+@-webkit-keyframes buzz {
+  /* line 3, ../../../private/scss/scss/effects/_buzz.scss */
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_buzz.scss */
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+@keyframes buzz {
+  /* line 3, ../../../private/scss/scss/effects/_buzz.scss */
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_buzz.scss */
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+/* line 144, ../../../private/scss/scss/hover.scss */
+.buzz {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 19, ../../../private/scss/scss/effects/_buzz.scss */
+.buzz:hover, .buzz:focus, .buzz:active {
+  -webkit-animation-name: buzz;
+  animation-name: buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* Buzz Out */
+@-webkit-keyframes buzz-out {
+  /* line 3, ../../../private/scss/scss/effects/_buzz-out.scss */
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_buzz-out.scss */
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_buzz-out.scss */
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_buzz-out.scss */
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_buzz-out.scss */
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_buzz-out.scss */
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  /* line 27, ../../../private/scss/scss/effects/_buzz-out.scss */
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  /* line 31, ../../../private/scss/scss/effects/_buzz-out.scss */
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  /* line 35, ../../../private/scss/scss/effects/_buzz-out.scss */
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  /* line 39, ../../../private/scss/scss/effects/_buzz-out.scss */
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes buzz-out {
+  /* line 3, ../../../private/scss/scss/effects/_buzz-out.scss */
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_buzz-out.scss */
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  /* line 11, ../../../private/scss/scss/effects/_buzz-out.scss */
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  /* line 15, ../../../private/scss/scss/effects/_buzz-out.scss */
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  /* line 19, ../../../private/scss/scss/effects/_buzz-out.scss */
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  /* line 23, ../../../private/scss/scss/effects/_buzz-out.scss */
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  /* line 27, ../../../private/scss/scss/effects/_buzz-out.scss */
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  /* line 31, ../../../private/scss/scss/effects/_buzz-out.scss */
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  /* line 35, ../../../private/scss/scss/effects/_buzz-out.scss */
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  /* line 39, ../../../private/scss/scss/effects/_buzz-out.scss */
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+/* line 149, ../../../private/scss/scss/hover.scss */
+.buzz-out {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 51, ../../../private/scss/scss/effects/_buzz-out.scss */
+.buzz-out:hover, .buzz-out:focus, .buzz-out:active {
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* BORDER TRANSITIONS */
+/* Border Fade */
+/* line 156, ../../../private/scss/scss/hover.scss */
+.border-fade {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices */
+}
+/* line 16, ../../../private/scss/scss/effects/_border-fade.scss */
+.border-fade:hover, .border-fade:focus, .border-fade:active {
+  box-shadow: inset 0 0 0 4px #666666, 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices */
+}
+
+/* Hollow */
+/* line 161, ../../../private/scss/scss/hover.scss */
+.hollow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices */
+}
+/* line 15, ../../../private/scss/scss/effects/_hollow.scss */
+.hollow:hover, .hollow:focus, .hollow:active {
+  background: none;
+}
+
+/* Trim */
+/* line 166, ../../../private/scss/scss/hover.scss */
+.trim {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_trim.scss */
+.trim:before {
+  content: '';
+  position: absolute;
+  border: white solid 4px;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+/* line 26, ../../../private/scss/scss/effects/_trim.scss */
+.trim:hover:before, .trim:focus:before, .trim:active:before {
+  opacity: 1;
+}
+
+/* Outline Outward */
+/* line 171, ../../../private/scss/scss/hover.scss */
+.outline-outward {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_outline-outward.scss */
+.outline-outward:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+/* line 25, ../../../private/scss/scss/effects/_outline-outward.scss */
+.outline-outward:hover:before, .outline-outward:focus:before, .outline-outward:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+}
+
+/* Outline Inward */
+/* line 176, ../../../private/scss/scss/hover.scss */
+.outline-inward {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_outline-inward.scss */
+.outline-inward:before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+/* line 27, ../../../private/scss/scss/effects/_outline-inward.scss */
+.outline-inward:hover:before, .outline-inward:focus:before, .outline-inward:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
+}
+
+/* Round Corners */
+/* line 181, ../../../private/scss/scss/hover.scss */
+.round-corners {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: border-radius;
+  transition-property: border-radius;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_round-corners.scss */
+.round-corners:hover, .round-corners:focus, .round-corners:active {
+  border-radius: 1em;
+}
+
+/* SHADOW/GLOW TRANSITIONS */
+/* Glow */
+/* line 188, ../../../private/scss/scss/hover.scss */
+.glow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_glow.scss */
+.glow:hover, .glow:focus, .glow:active {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Box Shadow Outset */
+/* line 193, ../../../private/scss/scss/hover.scss */
+.box-shadow-outset {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_box-shadow-outset.scss */
+.box-shadow-outset:hover, .box-shadow-outset:focus, .box-shadow-outset:active {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Box Shadow Inset */
+/* line 198, ../../../private/scss/scss/hover.scss */
+.box-shadow-inset {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 14, ../../../private/scss/scss/effects/_box-shadow-inset.scss */
+.box-shadow-inset:hover, .box-shadow-inset:focus, .box-shadow-inset:active {
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices */
+}
+
+/* Float Shadow */
+/* line 203, ../../../private/scss/scss/hover.scss */
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 11, ../../../private/scss/scss/effects/_float-shadow.scss */
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+/* line 28, ../../../private/scss/scss/effects/_float-shadow.scss */
+.float-shadow:hover, .float-shadow:focus, .float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+/* line 31, ../../../private/scss/scss/effects/_float-shadow.scss */
+.float-shadow:hover:before, .float-shadow:focus:before, .float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+/* Hover Shadow */
+@-webkit-keyframes hover {
+  /* line 3, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hover {
+  /* line 3, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  /* line 7, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@-webkit-keyframes hover-shadow {
+  /* line 13, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+
+  /* line 18, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  /* line 24, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+}
+
+@keyframes hover-shadow {
+  /* line 13, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+
+  /* line 18, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  /* line 24, ../../../private/scss/scss/effects/_hover-shadow.scss */
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+}
+
+/* line 208, ../../../private/scss/scss/hover.scss */
+.hover-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 38, ../../../private/scss/scss/effects/_hover-shadow.scss */
+.hover-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+/* line 55, ../../../private/scss/scss/effects/_hover-shadow.scss */
+.hover-shadow:hover, .hover-shadow:focus, .hover-shadow:active {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-animation-name: hover;
+  animation-name: hover;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/* line 64, ../../../private/scss/scss/effects/_hover-shadow.scss */
+.hover-shadow:hover:before, .hover-shadow:focus:before, .hover-shadow:active:before {
+  opacity: .4;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  -webkit-animation-name: hover-shadow;
+  animation-name: hover-shadow;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Shadow Radial */
+/* line 213, ../../../private/scss/scss/hover.scss */
+.shadow-radial {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 9, ../../../private/scss/scss/effects/_shadow-radial.scss */
+.shadow-radial:before, .shadow-radial:after {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  height: 5px;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+/* line 23, ../../../private/scss/scss/effects/_shadow-radial.scss */
+.shadow-radial:before {
+  bottom: 100%;
+  background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+}
+/* line 28, ../../../private/scss/scss/effects/_shadow-radial.scss */
+.shadow-radial:after {
+  top: 100%;
+  background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+}
+/* line 38, ../../../private/scss/scss/effects/_shadow-radial.scss */
+.shadow-radial:hover:before, .shadow-radial:focus:before, .shadow-radial:active:before, .shadow-radial:hover:after, .shadow-radial:focus:after, .shadow-radial:active:after {
+  opacity: 1;
+}
+
+/* SPEECH BUBBLES */
+/* Bubble Top */
+/* line 220, ../../../private/scss/scss/hover.scss */
+.bubble-top {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_bubble-top.scss */
+.bubble-top:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top;
+  transition-property: top;
+  left: calc(50% - 10px);
+  top: 0;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #e1e1e1 transparent;
+}
+/* line 25, ../../../private/scss/scss/effects/_bubble-top.scss */
+.bubble-top:hover:before, .bubble-top:focus:before, .bubble-top:active:before {
+  top: -10px;
+}
+
+/* Bubble Right */
+/* line 225, ../../../private/scss/scss/hover.scss */
+.bubble-right {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_bubble-right.scss */
+.bubble-right:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: right;
+  transition-property: right;
+  top: calc(50% - 10px);
+  right: 0;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #e1e1e1;
+}
+/* line 24, ../../../private/scss/scss/effects/_bubble-right.scss */
+.bubble-right:hover:before, .bubble-right:focus:before, .bubble-right:active:before {
+  right: -10px;
+}
+
+/* Bubble Bottom */
+/* line 230, ../../../private/scss/scss/hover.scss */
+.bubble-bottom {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_bubble-bottom.scss */
+.bubble-bottom:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  left: calc(50% - 10px);
+  bottom: 0;
+  border-width: 10px 10px 0 10px;
+  border-color: #e1e1e1 transparent transparent transparent;
+}
+/* line 24, ../../../private/scss/scss/effects/_bubble-bottom.scss */
+.bubble-bottom:hover:before, .bubble-bottom:focus:before, .bubble-bottom:active:before {
+  bottom: -10px;
+}
+
+/* Bubble Left */
+/* line 235, ../../../private/scss/scss/hover.scss */
+.bubble-left {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_bubble-left.scss */
+.bubble-left:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: left;
+  transition-property: left;
+  top: calc(50% - 10px);
+  left: 0;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #e1e1e1 transparent transparent;
+}
+/* line 24, ../../../private/scss/scss/effects/_bubble-left.scss */
+.bubble-left:hover:before, .bubble-left:focus:before, .bubble-left:active:before {
+  left: -10px;
+}
+
+/* Bubble Float Top */
+/* line 240, ../../../private/scss/scss/hover.scss */
+.bubble-float-top {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 10, ../../../private/scss/scss/effects/_bubble-float-top.scss */
+.bubble-float-top:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  top: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #e1e1e1 transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top;
+  transition-property: top;
+}
+/* line 26, ../../../private/scss/scss/effects/_bubble-float-top.scss */
+.bubble-float-top:hover, .bubble-float-top:focus, .bubble-float-top:active {
+  -webkit-transform: translateY(5px) translateZ(0);
+  transform: translateY(5px) translateZ(0);
+}
+/* line 32, ../../../private/scss/scss/effects/_bubble-float-top.scss */
+.bubble-float-top:hover:before, .bubble-float-top:focus:before, .bubble-float-top:active:before {
+  top: -10px;
+}
+
+/* Bubble Float Right */
+/* line 245, ../../../private/scss/scss/hover.scss */
+.bubble-float-right {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 10, ../../../private/scss/scss/effects/_bubble-float-right.scss */
+.bubble-float-right:before {
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 10px);
+  right: 0;
+  content: '';
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #e1e1e1;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: right;
+  transition-property: right;
+}
+/* line 25, ../../../private/scss/scss/effects/_bubble-float-right.scss */
+.bubble-float-right:hover, .bubble-float-right:focus, .bubble-float-right:active {
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+/* line 31, ../../../private/scss/scss/effects/_bubble-float-right.scss */
+.bubble-float-right:hover:before, .bubble-float-right:focus:before, .bubble-float-right:active:before {
+  right: -10px;
+}
+
+/* Bubble Float Bottom */
+/* line 250, ../../../private/scss/scss/hover.scss */
+.bubble-float-bottom {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 10, ../../../private/scss/scss/effects/_bubble-float-bottom.scss */
+.bubble-float-bottom:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  bottom: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #e1e1e1 transparent transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+}
+/* line 25, ../../../private/scss/scss/effects/_bubble-float-bottom.scss */
+.bubble-float-bottom:hover, .bubble-float-bottom:focus, .bubble-float-bottom:active {
+  -webkit-transform: translateY(-5px) translateZ(0);
+  transform: translateY(-5px) translateZ(0);
+}
+/* line 31, ../../../private/scss/scss/effects/_bubble-float-bottom.scss */
+.bubble-float-bottom:hover:before, .bubble-float-bottom:focus:before, .bubble-float-bottom:active:before {
+  bottom: -10px;
+}
+
+/* Bubble Float Left */
+/* line 255, ../../../private/scss/scss/hover.scss */
+.bubble-float-left {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 10, ../../../private/scss/scss/effects/_bubble-float-left.scss */
+.bubble-float-left:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: calc(50% - 10px);
+  left: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #e1e1e1 transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: left;
+  transition-property: left;
+}
+/* line 25, ../../../private/scss/scss/effects/_bubble-float-left.scss */
+.bubble-float-left:hover, .bubble-float-left:focus, .bubble-float-left:active {
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
+}
+/* line 31, ../../../private/scss/scss/effects/_bubble-float-left.scss */
+.bubble-float-left:hover:before, .bubble-float-left:focus:before, .bubble-float-left:active:before {
+  left: -10px;
+}
+
+/* CURLS */
+/* Curl Top Left */
+/* line 262, ../../../private/scss/scss/hover.scss */
+.curl-top-left {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_curl-top-left.scss */
+.curl-top-left:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: white;
+  /* IE9 */
+  background: linear-gradient(135deg, #ffffff 45%, #aaaaaa 50%, #cccccc 56%, #ffffff 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
+  /*For IE7-8-9*/
+  z-index: 1000;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+/* line 34, ../../../private/scss/scss/effects/_curl-top-left.scss */
+.curl-top-left:hover:before, .curl-top-left:focus:before, .curl-top-left:active:before {
+  width: 25px;
+  height: 25px;
+}
+
+/* Curl Top Right */
+/* line 267, ../../../private/scss/scss/hover.scss */
+.curl-top-right {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_curl-top-right.scss */
+.curl-top-right:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  right: 0;
+  background: white;
+  /* IE9 */
+  background: linear-gradient(225deg, #ffffff 45%, #aaaaaa 50%, #cccccc 56%, #ffffff 80%);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+/* line 31, ../../../private/scss/scss/effects/_curl-top-right.scss */
+.curl-top-right:hover:before, .curl-top-right:focus:before, .curl-top-right:active:before {
+  width: 25px;
+  height: 25px;
+}
+
+/* Curl Bottom Right */
+/* line 272, ../../../private/scss/scss/hover.scss */
+.curl-bottom-right {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_curl-bottom-right.scss */
+.curl-bottom-right:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  /* IE9 */
+  background: linear-gradient(315deg, #ffffff 45%, #aaaaaa 50%, #cccccc 56%, #ffffff 80%);
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+/* line 31, ../../../private/scss/scss/effects/_curl-bottom-right.scss */
+.curl-bottom-right:hover:before, .curl-bottom-right:focus:before, .curl-bottom-right:active:before {
+  width: 25px;
+  height: 25px;
+}
+
+/* Curl Bottom Left */
+/* line 277, ../../../private/scss/scss/hover.scss */
+.curl-bottom-left {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 8, ../../../private/scss/scss/effects/_curl-bottom-left.scss */
+.curl-bottom-left:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  /* IE9 */
+  background: linear-gradient(45deg, #ffffff 45%, #aaaaaa 50%, #cccccc 56%, #ffffff 80%);
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+/* line 31, ../../../private/scss/scss/effects/_curl-bottom-left.scss */
+.curl-bottom-left:hover:before, .curl-bottom-left:focus:before, .curl-bottom-left:active:before {
+  width: 25px;
+  height: 25px;
+}

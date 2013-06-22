@@ -1,0 +1,42 @@
+@import "foundation_icons";
+@import "foundation_settings";
+
+@import "../libs/hover/options";
+@import "../libs/hover/mixins";
+@import "../libs/hover/hacks";
+@import "../libs/hover/effects/buzz-out";
+
+@import "../libs/foundation/scss/normalize";
+@import "../libs/foundation/scss/foundation";
+
+.main {
+    padding-bottom: 2em;
+}
+
+.buzz-out {
+    @include buzz-out();
+}
+
+.score {
+    padding: 0.5em 0;
+    margin: 0.25em 0;
+    border-bottom: 1px solid darken($body-bg, 10);
+
+    &:last-child {
+        border-bottom-width: 0;
+    }
+}
+
+.page-1 {
+    &.score-1 {
+        font-size: 2em;
+    }
+
+    &.score-2 {
+        font-size: 1.5em;
+    }
+
+    &.score-3 {
+        font-size: 1.25em;
+    }
+}
