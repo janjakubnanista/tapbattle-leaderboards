@@ -18,7 +18,7 @@ var serialize = function(model) {
 
 exports.index = function(req, res) {
     var page = parseInt(req.param('page'), 10) - 1 || 0;
-    var pageSize = parseInt(req.param('pageSize'), 10) || 3;
+    var pageSize = parseInt(req.param('pageSize'), 10) || 100;
 
     if (page < 0 || pageSize < 1) {
         return res.render('400'); // TODO
@@ -58,7 +58,7 @@ exports.index = function(req, res) {
                 },
                 html: function() {
                     res.render('scores/index', {
-                        title: req.i18n.__('leaderboards'),
+                        title: req.i18n.__('Leaderboards'),
                         scores: scores,
                         page: page + 1,
                         next: nextLink,
@@ -89,6 +89,7 @@ exports.create = function(req, res) {
 
     var token = req.headers.token;
     var compareToken = new Buffer(md5(SECRET + req.body.taps + req.body.name)).toString('base64');
+
     if (token !== compareToken) {
         return res.render('401');
     }
@@ -100,7 +101,7 @@ exports.create = function(req, res) {
 
         res.format({
             json: function() {
-                res.json(serialize(score));
+                res.status(201).send(serialize(score));
             },
             html: function() {
                 res.redirect('/scores/' + score.id);

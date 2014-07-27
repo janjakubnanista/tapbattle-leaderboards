@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-var home = require('home');
-var scores = require('scores');
+var home = require('../app/controllers/home');
+var scores = require('../app/controllers/scores');
 
 /**
  * Expose

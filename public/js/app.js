@@ -1,6 +1,8 @@
 $(function() {
     'use strict';
 
+    $(document).foundation();
+
     var loadMoreButton = function() {
         return $('.more');
     };

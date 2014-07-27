@@ -5,7 +5,7 @@ var I18n = require('i18n-2');
 module.exports = function(app) {
     I18n.expressBind(app, {
         // setup some locales - other locales default to en silently
-        locales: ['en', 'de', 'cs'],
+        locales: ['en', 'de', 'cs', 'sk'],
         defaultLocale: 'de',
 
         // change the cookie name from 'lang' to 'locale'

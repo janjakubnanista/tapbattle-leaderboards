@@ -1,18 +1,17 @@
 {
-  "name": "node-express-mongoose",
+  "name": "tapbattle-backend",
   "description": "A boilerplate application for express mongoose",
   "version": "1.0.0",
+  "private": true,
   "author": {
-    "name": "Madhusudhan Srinivasa",
-    "email": "me@madhums.me"
+    "name": "Jan Nanista",
+    "email": "jan.jakub.nanista@gmail.com"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">= 0.10.0",
+    "npm": ">= 1.0.0"
   },
-  "scripts": {
-    "start": "NODE_PATH=./config:./app/controllers NODE_ENV=development ./node_modules/.bin/nodemon server.js",
-    "test": "make test"
-  },
+  "main": "server.js",
   "dependencies": {
     "MD5": "^1.2.1",
     "async": "latest",
@@ -20,12 +19,9 @@
     "compression": "latest",
     "connect-mongo": "latest",
     "cookie-parser": "latest",
-    "csurf": "latest",
     "express": "latest",
-    "express-session": "latest",
     "forever": "latest",
     "i18n-2": "^0.4.6",
-    "method-override": "latest",
     "mongoose": "latest",
     "morgan": "latest",
     "serve-static": "latest",
@@ -41,10 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/madhums/node-express-mongoose.git"
-  },
-  "keywords": [
-    "mvc",
-    "boilerplate"
-  ]
+    "url": "git://github.com/janjakubnanista/tapbattle-leaderboards.git"
+  }
 }
