@@ -91,7 +91,14 @@ exports.create = function(req, res) {
     var compareToken = new Buffer(md5(SECRET + req.body.taps + req.body.name)).toString('base64');
 
     if (token !== compareToken) {
-        return res.render('401');
+        return res.format({
+            json: function() {
+                res.status(401).send();
+            },
+            html: function() {
+                res.status(401).render('401');
+            }
+        });
     }
 
     score.save(function(err) {
