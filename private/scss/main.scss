@@ -9,8 +9,15 @@
 @import "../libs/foundation/scss/normalize";
 @import "../libs/foundation/scss/foundation";
 
+@media only screen and (max-width: 40em) {
+    html, body {
+        font-size: 87.5%;
+    }
+}
+
 .main {
     padding-bottom: 2em;
+    margin: 0 1em;
 }
 
 .buzz-out {

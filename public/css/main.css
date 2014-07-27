@@ -11806,12 +11806,19 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 12, ../../private/scss/main.scss */
+@media only screen and (max-width: 40em) {
+  /* line 13, ../../private/scss/main.scss */
+  html, body {
+    font-size: 87.5%;
+  }
+}
+/* line 18, ../../private/scss/main.scss */
 .main {
   padding-bottom: 2em;
+  margin: 0 1em;
 }
 
-/* line 16, ../../private/scss/main.scss */
+/* line 23, ../../private/scss/main.scss */
 .buzz-out {
   display: inline-block;
   -webkit-transform: translateZ(0);
@@ -11830,26 +11837,26 @@ th.hide-for-touch {
   animation-iteration-count: 1;
 }
 
-/* line 20, ../../private/scss/main.scss */
+/* line 27, ../../private/scss/main.scss */
 .score {
   padding: 0.5em 0;
   margin: 0.25em 0;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 25, ../../private/scss/main.scss */
+/* line 32, ../../private/scss/main.scss */
 .score:last-child {
   border-bottom-width: 0;
 }
 
-/* line 31, ../../private/scss/main.scss */
+/* line 38, ../../private/scss/main.scss */
 .page-1.score-1 {
   font-size: 2em;
 }
-/* line 35, ../../private/scss/main.scss */
+/* line 42, ../../private/scss/main.scss */
 .page-1.score-2 {
   font-size: 1.5em;
 }
-/* line 39, ../../private/scss/main.scss */
+/* line 46, ../../private/scss/main.scss */
 .page-1.score-3 {
   font-size: 1.25em;
 }
